@@ -1,6 +1,6 @@
 from turtle import Turtle
 import random
-
+### CONSTANST ###
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
@@ -13,6 +13,7 @@ class CarManager:
         self.move_speed = STARTING_MOVE_DISTANCE
 
     def create_car(self):
+        """Create a car on a random position"""
         random_chance = random.randint(1, 6)
         if random_chance == 1:
             new_car = Turtle("square")
@@ -33,4 +34,5 @@ class CarManager:
                 return True
 
     def increase_speed(self):
+        """Increase cars speed each the Turtle cross the road"""
         self.move_speed += MOVE_INCREMENT
